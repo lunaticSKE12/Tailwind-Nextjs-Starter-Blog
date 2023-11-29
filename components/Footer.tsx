@@ -19,12 +19,26 @@ export default function Footer() {
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{` • `}</div>
-          <Link href="/">{siteMetadata.title}</Link>
+          <Link href="/" className="underline">{siteMetadata.title}</Link>
         </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
+        <div className="mb-8 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+          <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog" className="underline">
             Tailwind Nextjs Theme
           </Link>
+          <div>{` • `}</div>
+          <Link
+          href="https://www.freepik.com/"
+          className="underline"
+          >
+          Logo by freepik
+        </Link>
+          <div>{` • `}</div>
+        <Link
+          href="/sitemap.xml"
+          className="underline"
+        >
+          sitemap.xml
+        </Link>
         </div>
       </div>
     </footer>
