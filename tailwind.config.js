@@ -32,6 +32,15 @@ module.exports = {
         dark: '#1b1b1b',
         light: '#fff',
       },
+      animation: {
+        roll: 'roll 24s linear infinite',
+      },
+      keyframes: {
+        roll: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
