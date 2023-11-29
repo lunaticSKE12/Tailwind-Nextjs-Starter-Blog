@@ -25,6 +25,7 @@ import rehypePrismPlus from 'rehype-prism-plus';
 import rehypePresetMinify from 'rehype-preset-minify';
 import siteMetadata from './data/siteMetadata';
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js';
+import rehypePrettyCode from 'rehype-pretty-code';
 
 const root = process.cwd();
 const isProduction = process.env.NODE_ENV === 'production';
@@ -136,6 +137,10 @@ export const Authors = defineDocumentType(() => ({
   computedFields,
 }));
 
+const codeOptions = {
+  theme: 'github-dark',
+};
+
 export default makeSource({
   contentDirPath: 'data',
   documentTypes: [Blog, Authors],
@@ -152,6 +157,7 @@ export default makeSource({
       rehypeSlug,
       rehypeAutolinkHeadings,
       rehypeKatex,
+      [rehypePrettyCode, codeOptions],
       [rehypeCitation, { path: path.join(root, 'data') }],
       [rehypePrismPlus, { defaultLanguage: 'js', ignoreMissing: true }],
       rehypePresetMinify,

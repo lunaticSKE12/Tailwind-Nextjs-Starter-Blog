@@ -53,8 +53,11 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </dl>
               <div>
                 <PageTitle>{title}</PageTitle>
-                <div className="m-3">{readingTime.text}</div>
-                <ViewCounter slug={slug} />
+                
+                <div className="px-2  md:px-10 bg-accent dark:bg-accentDark text-light dark:text-dark py-2 flex items-center justify-around flex-wrap text-lg sm:text-xl font-medium mx-5  md:mx-10 rounded-lg">
+                  <div className="m-3">{readingTime.text}</div>
+                  <ViewCounter slug={slug} />
+                </div>
                 
               </div>
             </div>
