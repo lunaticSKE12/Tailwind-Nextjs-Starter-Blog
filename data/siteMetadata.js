@@ -1,22 +1,23 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
+  title: 'Next.js Blog With Tailwind CSS and Contentlayer',
   author: 'Napong Dungduangsasitorn',
   headerTitle: 'LunaticBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description:
+    'A modern blog built using Next.js, Tailwind CSS, and Contentlayer for easy content management.',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://tailwind-nextjs-starter-blog-bice.vercel.app/',
+  siteRepo: 'https://github.com/lunaticSKE12/Tailwind-Nextjs-Starter-Blog',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
+  email: 'napong.d@ku.th',
+  github: 'https://github.com/lunaticSKE12',
+  twitter: 'https://twitter.com/lunaticSKE',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  linkedin: 'https://www.linkedin.com/in/napong-dungduangsasitorn/',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
@@ -86,6 +87,6 @@ const siteMetadata = {
     //   indexName: 'docsearch',
     // },
   },
-}
+};
 
-module.exports = siteMetadata
+module.exports = siteMetadata;

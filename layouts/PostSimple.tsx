@@ -8,6 +8,7 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import ViewCounter from '@/components/ViewCounter'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -17,7 +18,7 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, next, prev, children }: LayoutProps) {
-  const { path, slug, date, title } = content
+  const { path, slug, date, title,readingTime } = content
 
   return (
     <SectionContainer>
@@ -36,6 +37,12 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
               </dl>
               <div>
                 <PageTitle>{title}</PageTitle>
+                <div className="px-2  md:px-10 bg-accent dark:bg-accentDark text-light dark:text-dark py-2 flex items-center justify-around flex-wrap text-lg sm:text-xl font-medium mx-5  md:mx-10 rounded-lg">
+                  <div className="m-3">{readingTime.text}</div>
+                  <ViewCounter slug={slug} />
+                </div>
+                
+                
               </div>
             </div>
           </header>
