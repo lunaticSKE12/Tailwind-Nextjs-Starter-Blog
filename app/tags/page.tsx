@@ -3,6 +3,7 @@ import Tag from '@/components/Tag'
 import { slug } from 'github-slugger'
 import tagData from 'app/tag-data.json'
 import { genPageMetadata } from 'app/seo'
+import LottieAnimation from '@/components/LottieAnimation'
 
 export const metadata = genPageMetadata({ title: 'Tags', description: 'Things I blog about' })
 
@@ -34,6 +35,9 @@ export default async function Page() {
               </div>
             )
           })}
+        </div>
+        <div className="inline-block w-full sm:w-4/5 md:w-2/5 h-full md:border-l-2 border-solid border-dark dark:border-light">
+          <LottieAnimation />
         </div>
       </div>
     </>

@@ -15,6 +15,7 @@ export default function Page() {
       <AuthorLayout content={mainContent}>
         <MDXLayoutRenderer code={author.body.code} />
       </AuthorLayout>
+      
     </>
   )
 }

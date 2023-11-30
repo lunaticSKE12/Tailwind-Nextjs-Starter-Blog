@@ -124,7 +124,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
           prose-blockquote:rounded-r-lg
           prose-li:marker:text-accent
 
-          dark:text-light
+          dark:prose-invert
           dark:prose-blockquote:border-accentDark
           dark:prose-blockquote:bg-accentDark/20
           dark:prose-li:marker:text-accentDark
