@@ -2,8 +2,16 @@ import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
 
+/* The line `export const metadata = genPageMetadata({ title: 'Projects' })` is creating a constant
+variable named `metadata` and assigning it the value returned by the `genPageMetadata` function. The
+`genPageMetadata` function is likely a custom function that generates metadata for the page, such as
+the title. In this case, it is generating metadata for the "Projects" page with the title set to
+"Projects". This metadata can be used for SEO purposes or for other page-related information. */
+
 export const metadata = genPageMetadata({ title: 'Projects' })
 
+/* The `export default function Projects()` is a React functional component that exports the component
+as the default export. */
 export default function Projects() {
   return (
     <>

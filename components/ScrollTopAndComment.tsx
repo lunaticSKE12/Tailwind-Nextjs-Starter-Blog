@@ -3,9 +3,17 @@
 import siteMetadata from '@/data/siteMetadata'
 import { useEffect, useState } from 'react'
 
+/* The code is defining a functional component called `ScrollTopAndComment`. This component is
+responsible for rendering two buttons: one for scrolling to the top of the page and another for
+scrolling to a specific comment section. */
 const ScrollTopAndComment = () => {
+  /* The line `const [show, setShow] = useState(false)` is using the `useState` hook to declare a state
+  variable called `show` and a function called `setShow` to update the value of `show`. The initial
+  value of `show` is set to `false`. */
   const [show, setShow] = useState(false)
 
+  /* The `useEffect` hook is used to perform side effects in a functional component. In this case, it
+  is used to add an event listener to the window object for the 'scroll' event. */
   useEffect(() => {
     const handleWindowScroll = () => {
       if (window.scrollY > 50) setShow(true)
@@ -16,9 +24,15 @@ const ScrollTopAndComment = () => {
     return () => window.removeEventListener('scroll', handleWindowScroll)
   }, [])
 
+  /**
+   * The function handleScrollTop scrolls the window to the top.
+   */
   const handleScrollTop = () => {
     window.scrollTo({ top: 0 })
   }
+ /**
+  * The function `handleScrollToComment` scrolls the page to the element with the id "comment".
+  */
   const handleScrollToComment = () => {
     document.getElementById('comment')?.scrollIntoView()
   }

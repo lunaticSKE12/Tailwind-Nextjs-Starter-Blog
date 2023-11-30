@@ -10,6 +10,8 @@ import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import ViewCounter from '@/components/ViewCounter'
 
+/* The `LayoutProps` interface defines the props that can be passed to the `PostLayout` component. It
+includes the following properties: */
 interface LayoutProps {
   content: CoreContent<Blog>
   children: ReactNode
@@ -17,6 +19,8 @@ interface LayoutProps {
   prev?: { path: string; title: string }
 }
 
+/* The `PostLayout` function is a React component that serves as the layout for a blog post. It takes
+in several props: `content`, `next`, `prev`, and `children`. */
 export default function PostLayout({ content, next, prev, children }: LayoutProps) {
   const { path, slug, date, title,readingTime } = content
 
@@ -41,8 +45,6 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
                   <div className="m-3">{readingTime.text}</div>
                   <ViewCounter slug={slug} />
                 </div>
-                
-                
               </div>
             </div>
           </header>

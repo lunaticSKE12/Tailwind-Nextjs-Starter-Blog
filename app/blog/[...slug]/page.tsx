@@ -15,12 +15,24 @@ import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 
 const defaultLayout = 'PostLayout'
+/* The `layouts` object is defining different layout components for the `Page` component. Each layout
+component is associated with a specific key (`PostSimple`, `PostLayout`, `PostBanner`). These layout
+components will be used to render the content of the page based on the layout specified in the
+`post` object. */
 const layouts = {
   PostSimple,
   PostLayout,
   PostBanner,
 }
 
+/**
+ * The function `generateMetadata` generates metadata for a blog post based on its slug and returns it
+ * as a promise.
+ * @param  - The `generateMetadata` function takes in an object with a `params` property. The `params`
+ * property is an object with a `slug` property, which is an array of strings.
+ * @returns The function `generateMetadata` returns a `Promise` that resolves to an object of type
+ * `Metadata` or `undefined`.
+ */
 export async function generateMetadata({
   params,
 }: {
@@ -74,12 +86,25 @@ export async function generateMetadata({
   }
 }
 
+/**
+ * The function generates static parameters for all blogs by splitting their slugs.
+ * @returns The function `generateStaticParams` returns an array of objects, where each object has a
+ * property `slug` that is an array of strings.
+ */
 export const generateStaticParams = async () => {
   const paths = allBlogs.map((p) => ({ slug: p.slug.split('/') }))
 
   return paths
 }
 
+/**
+ * This is a TypeScript React function that renders a page based on the provided slug parameter,
+ * displaying the content of a blog post along with its author details and navigation links to previous
+ * and next posts.
+ * @param  - The `Page` function takes an object as its parameter, which has a `params` property. The
+ * `params` property is an object with a `slug` property, which is an array of strings.
+ * @returns JSX elements.
+ */
 export default async function Page({ params }: { params: { slug: string[] } }) {
   const slug = decodeURI(params.slug.join('/'))
   // Filter out drafts in production

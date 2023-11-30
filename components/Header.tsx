@@ -8,6 +8,8 @@ import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
 import Image from 'next/image'
 
+/* The code defines a functional component called `Header`. This component represents the header
+section of a website. */
 const Header = () => {
   return (
     <header className="flex items-center justify-between py-10">

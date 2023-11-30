@@ -6,6 +6,8 @@ import Image from './Image'
 import CustomLink from './Link'
 import TableWrapper from './TableWrapper'
 
+/* The code is exporting a constant named `components` of type `MDXComponents`. This constant is an
+object that contains various components used in a TypeScript React application. */
 export const components: MDXComponents = {
   Image,
   TOCInline,

@@ -3,10 +3,24 @@
 import { useState } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
+/**
+ * The `MobileNav` component is a responsive navigation menu that toggles its visibility and adjusts
+ * the body's overflow property to prevent or allow scrolling.
+ * @returns The MobileNav component is returning JSX elements. It consists of a button with an SVG
+ * icon, a div containing a navigation menu, and a list of navigation links. The visibility of the
+ * navigation menu is controlled by the `navShow` state variable.
+ */
 
 const MobileNav = () => {
+/* The line `const [navShow, setNavShow] = useState(false)` is declaring a state variable called
+`navShow` and a function to update its value called `setNavShow`. The initial value of `navShow` is
+set to `false`. This is using the `useState` hook from React to add state to a functional component. */
   const [navShow, setNavShow] = useState(false)
 
+/**
+ * The function `onToggleNav` toggles the visibility of the navigation and adjusts the body's overflow
+ * property to prevent or allow scrolling.
+ */
   const onToggleNav = () => {
     setNavShow((status) => {
       if (status) {

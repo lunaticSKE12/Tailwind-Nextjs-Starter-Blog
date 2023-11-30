@@ -3,12 +3,19 @@ import type { Authors } from 'contentlayer/generated'
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
 
+
 interface Props {
   children: ReactNode
   content: Omit<Authors, '_id' | '_raw' | 'body'>
 }
 
+/* The code snippet is defining a React functional component called `AuthorLayout`. It takes two props:
+`children` and `content`. */
 export default function AuthorLayout({ children, content }: Props) {
+/* The line `const { name, avatar, occupation, company, email, twitter, linkedin, github } = content` is using object
+destructuring to extract specific properties from the `content` object. This allows us to access these properties
+directly without having to use `content.name`, `content.avatar`, etc. */
+
   const { name, avatar, occupation, company, email, twitter, linkedin, github } = content
 
   return (

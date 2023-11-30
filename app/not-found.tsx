@@ -1,5 +1,7 @@
 import Link from '@/components/Link'
 
+/* The code you provided is a React functional component called `NotFound`. It is exported as the
+default export, which means it can be imported and used in other files without specifying its name. */
 export default function NotFound() {
   return (
     <div className="flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">

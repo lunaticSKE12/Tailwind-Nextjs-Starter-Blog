@@ -11,10 +11,14 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
 
+/* The `PaginationProps` interface is defining the shape of the props that the `Pagination` component
+expects. It has two properties: */
 interface PaginationProps {
   totalPages: number
   currentPage: number
 }
+/* The `ListLayoutProps` interface is defining the shape of the props that the `ListLayoutWithTags`
+component expects. It has four properties: */
 interface ListLayoutProps {
   posts: CoreContent<Blog>[]
   title: string
@@ -22,6 +26,9 @@ interface ListLayoutProps {
   pagination?: PaginationProps
 }
 
+/* The `Pagination` function is a React component that renders a pagination navigation bar. It takes
+two props: `totalPages` and `currentPage`, which represent the total number of pages and the current
+page number, respectively. */
 function Pagination({ totalPages, currentPage }: PaginationProps) {
   const pathname = usePathname()
   const basePath = pathname.split('/')[1]
@@ -61,6 +68,8 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
     </div>
   )
 }
+/* The code block is defining a React functional component called `ListLayoutWithTags`. This component
+takes in several props: `posts`, `title`, `initialDisplayPosts`, and `pagination`. */
 
 export default function ListLayoutWithTags({
   posts,

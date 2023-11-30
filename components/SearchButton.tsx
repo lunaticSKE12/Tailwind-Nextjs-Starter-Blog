@@ -1,8 +1,20 @@
 import { AlgoliaButton } from 'pliny/search/AlgoliaButton'
 import { KBarButton } from 'pliny/search/KBarButton'
 import siteMetadata from '@/data/siteMetadata'
+/**
+ * The SearchButton component checks if the search provider is either Algolia or KBar and renders the
+ * appropriate button component.
+ * @returns The code is returning a search button component. The specific button component being
+ * returned depends on the value of `siteMetadata.search.provider`. If `siteMetadata.search.provider`
+ * is 'algolia', it returns an `AlgoliaButton` component. If `siteMetadata.search.provider` is 'kbar',
+ * it returns a `KBarButton` component. The returned button component includes an SVG icon for search.
+ */
 
 const SearchButton = () => {
+ /* The code is checking if the `siteMetadata.search` object exists and if the `provider` property of
+ `siteMetadata.search` is either 'algolia' or 'kbar'. If both conditions are true, it assigns the
+ value of `AlgoliaButton` or `KBarButton` to the `SearchButtonWrapper` variable based on the value
+ of `siteMetadata.search.provider`. */
   if (
     siteMetadata.search &&
     (siteMetadata.search.provider === 'algolia' || siteMetadata.search.provider === 'kbar')

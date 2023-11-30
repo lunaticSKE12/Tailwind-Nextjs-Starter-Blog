@@ -11,12 +11,17 @@ import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 
+/* The code `const space_grotesk = Space_Grotesk({ subsets: ['latin'], display: 'swap', variable:
+'--font-space-grotesk' })` is creating a font configuration using the `Space_Grotesk` font from
+Google Fonts. */
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-space-grotesk',
 })
 
+/* The `metadata` object is defining metadata for the website. It includes various properties such as
+`title`, `description`, `openGraph`, `alternates`, `robots`, and `twitter`. */
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
   title: {
@@ -57,6 +62,17 @@ export const metadata: Metadata = {
   },
 }
 
+/**
+ * The RootLayout component is a layout wrapper for the entire application, providing common elements
+ * such as the HTML structure, favicon links, theme colors, RSS feed link, and a header, main content
+ * area, and footer.
+ * @param  - - `children`: The content that will be rendered inside the `RootLayout` component. It is
+ * of type `React.ReactNode`, which means it can accept any valid React element or component as its
+ * children.
+ * @returns an HTML document with various meta tags, links to favicon images, and a body element
+ * containing the layout structure of the website. The layout includes a header, main content area, and
+ * a footer. The content of the main area is passed as a prop called "children".
+ */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html

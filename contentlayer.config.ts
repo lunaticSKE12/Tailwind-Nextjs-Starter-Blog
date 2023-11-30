@@ -29,6 +29,9 @@ import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js';
 const root = process.cwd();
 const isProduction = process.env.NODE_ENV === 'production';
 
+/* The `computedFields` object defines additional fields that can be computed based on the existing
+fields of a document. These computed fields are used to add extra information or modify existing
+information in the document. */
 const computedFields: ComputedFields = {
   readingTime: { type: 'json', resolve: (doc) => readingTime(doc.body.raw) },
   slug: {
@@ -66,6 +69,12 @@ function createTagCount(allBlogs) {
   writeFileSync('./app/tag-data.json', JSON.stringify(tagCount));
 }
 
+/**
+ * The function `createSearchIndex` generates a local search index for a website's blog posts if the
+ * search provider is set to 'kbar' and a search documents path is specified in the site metadata.
+ * @param allBlogs - An array of blog objects. Each blog object should have properties such as title,
+ * content, date, and tags.
+ */
 function createSearchIndex(allBlogs) {
   if (
     siteMetadata?.search?.provider === 'kbar' &&

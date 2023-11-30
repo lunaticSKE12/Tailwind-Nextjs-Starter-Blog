@@ -6,6 +6,8 @@ import NewsletterForm from 'pliny/ui/NewsletterForm'
 
 const MAX_DISPLAY = 5
 
+/* The code is defining a React functional component called "Home" that takes in a prop called "posts".
+Inside the component, it returns JSX code that represents the structure and content of a home page. */
 export default function Home({ posts }) {
   return (
     <>

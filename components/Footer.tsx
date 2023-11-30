@@ -2,6 +2,11 @@ import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 
+/**
+ * The Footer component renders a footer section with social icons, author information, site title, and
+ * links to external resources.
+ * @returns a JSX element representing the footer section of a website.
+ */
 export default function Footer() {
   return (
     <footer>

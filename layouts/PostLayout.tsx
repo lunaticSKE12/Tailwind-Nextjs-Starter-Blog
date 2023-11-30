@@ -15,6 +15,10 @@ const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
 const discussUrl = (path) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(`${siteMetadata.siteUrl}/${path}`)}`
 
+/* The `postDateTemplate` constant is defining an object of type `Intl.DateTimeFormatOptions`. This
+object is used to specify the format in which the date will be displayed. In this case, it specifies
+that the date should be displayed with the weekday (e.g., Monday), the full month name (e.g.,
+January), the day of the month (e.g., 1), and the year (e.g., 2022). */
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
   year: 'numeric',
@@ -22,6 +26,8 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
   day: 'numeric',
 }
 
+/* The `LayoutProps` interface is defining the props that can be passed to the `PostLayout` component.
+It includes the following props: */
 interface LayoutProps {
   content: CoreContent<Blog>
   authorDetails: CoreContent<Authors>[]
@@ -30,6 +36,8 @@ interface LayoutProps {
   children: ReactNode
 }
 
+/* The above code is defining a React functional component called "PostLayout". It takes in several
+props including "content", "authorDetails", "next", "prev", and "children". */
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
   const { filePath, path, slug, date, title, tags,readingTime } = content ;
   const basePath = path.split('/')[0]
@@ -53,12 +61,10 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </dl>
               <div>
                 <PageTitle>{title}</PageTitle>
-                
                 <div className="px-2  md:px-10 bg-accent dark:bg-accentDark text-light dark:text-dark py-2 flex items-center justify-around flex-wrap text-lg sm:text-xl font-medium mx-5  md:mx-10 rounded-lg">
                   <div className="m-3">{readingTime.text}</div>
                   <ViewCounter slug={slug} />
                 </div>
-                
               </div>
             </div>
           </header>

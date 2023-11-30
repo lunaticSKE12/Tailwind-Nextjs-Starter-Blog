@@ -9,16 +9,25 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 
+/* The `PaginationProps` interface is defining the shape of the props that the `Pagination` component
+expects. It has two properties: `totalPages` and `currentPage`, both of which are of type `number`.
+These props are used to determine the total number of pages and the current page in the pagination
+component. */
 interface PaginationProps {
   totalPages: number
   currentPage: number
 }
+/* The `ListLayoutProps` interface is defining the shape of the props that the `ListLayout` component
+expects. It has four properties: */
 interface ListLayoutProps {
   posts: CoreContent<Blog>[]
   title: string
   initialDisplayPosts?: CoreContent<Blog>[]
   pagination?: PaginationProps
 }
+/* The `Pagination` function is a React component that renders a pagination component for navigating
+between pages of a list of items. It takes two props: `totalPages` and `currentPage`, which are used
+to determine the total number of pages and the current page in the pagination component. */
 
 function Pagination({ totalPages, currentPage }: PaginationProps) {
   const pathname = usePathname()
@@ -59,6 +68,9 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
     </div>
   )
 }
+
+/* The code is defining a React functional component called `ListLayout`. This component takes in
+several props: `posts`, `title`, `initialDisplayPosts`, and `pagination`. */
 
 export default function ListLayout({
   posts,

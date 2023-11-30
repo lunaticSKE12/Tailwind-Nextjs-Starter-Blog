@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { SunIcon, MoonIcon } from './Icons'
 
+/* The code is defining a functional component called `ThemeSwitch`. */
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()

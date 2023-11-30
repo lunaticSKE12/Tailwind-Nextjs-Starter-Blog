@@ -5,8 +5,20 @@ import tagData from 'app/tag-data.json'
 import { genPageMetadata } from 'app/seo'
 import LottieAnimation from '@/components/LottieAnimation'
 
+/* The line `export const metadata = genPageMetadata({ title: 'Tags', description: 'Things I blog
+about' })` is exporting a constant variable named `metadata`. It is using the `genPageMetadata`
+function to generate metadata for the page. The metadata includes the title of the page, which is
+set to 'Tags', and the description of the page, which is set to 'Things I blog about'. This metadata
+can be used for SEO purposes, such as setting the title and description of the page in search engine
+results. */
 export const metadata = genPageMetadata({ title: 'Tags', description: 'Things I blog about' })
 
+/**
+ * The function renders a page that displays a list of tags and their corresponding counts, along with
+ * a link to view posts tagged with each tag.
+ * @returns The code is returning a JSX element that represents a page layout. It includes a heading, a
+ * list of tags with their respective counts, and a Lottie animation.
+ */
 export default async function Page() {
   const tagCounts = tagData as Record<string, number>
   const tagKeys = Object.keys(tagCounts)
