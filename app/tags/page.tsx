@@ -49,7 +49,7 @@ export default async function Page() {
           })}
         </div>
         <div className="inline-block w-full sm:w-4/5 md:w-2/5 h-full md:border-l-2 border-solid border-dark dark:border-light">
-          <LottieAnimation />
+          <LottieAnimation imageSrc={"/Animation - 1701354821927.lottie"}/>
         </div>
       </div>
     </>

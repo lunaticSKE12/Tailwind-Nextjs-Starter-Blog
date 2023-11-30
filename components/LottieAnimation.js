@@ -8,10 +8,8 @@ import '@dotlottie/react-player/dist/index.css';
  * @returns The LottieAnimation component is returning a DotLottiePlayer component with the src,
  * autoplay, and loop props set.
  */
-const LottieAnimation = () => {
-  return (
-    <DotLottiePlayer src="/animation.lottie" autoplay loop></DotLottiePlayer>
-  );
+const LottieAnimation = ({ imageSrc }) => {
+  return <DotLottiePlayer src={imageSrc} autoplay loop></DotLottiePlayer>;
 };
 
 export default LottieAnimation;
