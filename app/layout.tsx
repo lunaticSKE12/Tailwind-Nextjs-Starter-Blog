@@ -10,6 +10,7 @@ import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 
 /* The code `const space_grotesk = Space_Grotesk({ subsets: ['latin'], display: 'swap', variable:
 '--font-space-grotesk' })` is creating a font configuration using the `Space_Grotesk` font from
@@ -102,6 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </SectionContainer>
         </ThemeProviders>
+        <VercelAnalytics />
       </body>
     </html>
   )
