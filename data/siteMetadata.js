@@ -2,12 +2,12 @@
 const siteMetadata = {
   title: 'Next.js Blog With Tailwind CSS and Contentlayer',
   author: 'Napong Dungduangsasitorn',
-  headerTitle: 'LunaticBlog',
+  headerTitle: 'Lunatic Verse',
   description:
     'A modern blog built using Next.js, Tailwind CSS, and Contentlayer for easy content management.',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog-bice.vercel.app/',
+  siteUrl: 'https://www.lunatic-verse.xyz',
   siteRepo: 'https://github.com/lunaticSKE12/Tailwind-Nextjs-Starter-Blog',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
