@@ -11,7 +11,7 @@ const ContentSecurityPolicy = `
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src *.s3.amazonaws.com;
-  connect-src * vitals.vercel-insights.com;
+  connect-src * 'self' https://vitals.vercel-insights.com;
   font-src 'self';
   frame-src giscus.app
 `;
